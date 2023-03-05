@@ -35,8 +35,8 @@ Users should be able to:
 ![](/assets/screenshots/Mobile-Screenshot.png) 
 ### Links
 
-- Solution URL: 
-- Live Site URL: 
+- Solution URL: https://www.frontendmentor.io/solutions/results-summary-component-KUPu-7EJjB
+- Live Site URL: https://rebrodie.github.io/Results-summary-component/ 
 ### Built with
 
 - Semantic HTML5 markup
