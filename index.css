@@ -11,11 +11,11 @@
 html {
   font-size: 62.5%;
   min-width: 375px;
-  overflow: hidden;
 }
 body {
   font-size: 1.8rem;
   background: hsl(0, 0%, 100%);
+  overflow: clip;
 }
 .wrapper {
   display: flex;
@@ -39,6 +39,7 @@ body {
     hsl(252, 100%, 67%),
     hsl(241, 81%, 54%)
   );
+  padding: 2rem;
   width: 100%;
   min-height: 300px;
 }
@@ -67,14 +68,14 @@ body {
   color: hsl(241, 100%, 89%, 0.5);
   font-weight: 500;
 }
-.result-text {
+.result-description {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 3rem;
   color: hsl(241, 100%, 89%);
 }
-.result-text h1 {
+.result-description h1 {
   font-size: 2.2rem;
   color: hsl(0, 0%, 100%);
   padding: 8px;
@@ -223,7 +224,7 @@ button:hover {
     width: 165px;
     height: 160px;
   }
-  .result-text h1 {
+  .result-description h1 {
     font-size: 3rem;
   }
   .summary-container {
