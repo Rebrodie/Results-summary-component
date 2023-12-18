@@ -1,251 +1,244 @@
 @font-face {
-	font-family: "MyFont";
-	src: url(/assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format("truetype");
+  font-family: "MyFont";
+  src: url(/assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format("truetype");
 }
 * {
-	font-family: "MyFont", sans-serif;
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
+  font-family: "MyFont", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 html {
-	font-size: 62.5%;
-	min-width: 375px;
-    overflow: hidden;
+  font-size: 62.5%;
+  min-width: 375px;
+  overflow: hidden;
 }
 body {
-	font-size: 1.8rem;
-	background: hsl(0, 0%, 100%);
+  font-size: 1.8rem;
+  background: hsl(0, 0%, 100%);
 }
 .wrapper {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	min-height: 100vh;
-	min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
 }
 .container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .result-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	border-radius: 0 0 50px 50px;
-	background: linear-gradient(
-		to bottom,
-		hsl(252, 100%, 67%),
-		hsl(241, 81%, 54%)
-	);
-	width: 100%;
-	min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0 0 50px 50px;
+  background: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+  width: 100%;
+  min-height: 300px;
 }
-.center {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	gap: 1rem;
-	width: 80%;
-}
-#result-header {
-	display: flex;
-	align-items: center;
-	min-height: 8vh;
-}
-#result-header h1 {
-	font-size: 1.8rem;
-	color: hsl(241, 100%, 89%);
+#result-h1 {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.8rem;
+  color: hsl(241, 100%, 89%);
 }
 .result {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background: radial-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
-	border-radius: 50%;
-	width: 125px;
-	height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+  border-radius: 50%;
+  width: 125px;
+  height: 120px;
 }
 .result span {
-	color: hsl(0, 0%, 100%);
-	font-weight: 800;
-	font-size: 5.5rem;
+  color: hsl(0, 0%, 100%);
+  font-weight: 800;
+  font-size: 5.5rem;
 }
 .result a {
-	color: hsl(241, 100%, 89%, 0.5);
-	font-weight: 500;
+  color: hsl(241, 100%, 89%, 0.5);
+  font-weight: 500;
 }
 .result-text {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding-bottom: 3rem;
-	color: hsl(241, 100%, 89%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 3rem;
+  color: hsl(241, 100%, 89%);
 }
 .result-text h1 {
-	font-size: 2.2rem;
-	color: hsl(0, 0%, 100%);
-	padding: 8px;
+  font-size: 2.2rem;
+  color: hsl(0, 0%, 100%);
+  padding: 8px;
 }
 .summary-container {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: nowrap;
-	gap: 1rem;
-	width: 85%;
-}
-#summary-header {
-	width: 100%;
-	padding: 1.2rem;
-	color: hsl(224, 30%, 27%);
-}
-#summary-header h1 {
-	font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  width: 85%;
+  .summary-header {
+    width: 100%;
+    padding: 1.2rem;
+    color: hsl(224, 30%, 27%);
+    > h1 {
+      font-size: 1.8rem;
+    }
+  }
 }
 .summary {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	align-items: center;
-	justify-content: space-between;
-	font-weight: 700;
-	padding: 0.8rem;
-	border-radius: 11px;
-	width: 100%;
-	min-height: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  padding: 0.8rem;
+  border-radius: 11px;
+  width: 100%;
+  min-height: 50px;
 }
 .summary span {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	align-items: center;
-	font-size: 1.5rem;
-	width: 35%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  font-size: 1.5rem;
+  width: 35%;
 }
 .summary span img {
-	width: 35px;
-	height: 25px;
-	padding-right: 15px;
+  width: 35px;
+  height: 25px;
+  padding-right: 15px;
 }
-#reaction {
-	color: hsl(0, 100%, 67%);
+.reaction {
+  background: hsla(0, 100%, 67%, 0.09);
+  > span {
+    color: hsl(0, 100%, 67%);
+  }
 }
-#bg-reaction {
-	background: hsla(0, 100%, 67%, 0.09);
+.memory {
+  background: hsla(39, 100%, 56%, 0.09);
+  > span {
+    color: hsl(39, 100%, 56%);
+  }
 }
-#memory {
-	color: hsl(39, 100%, 56%);
+.verbal {
+  background: hsla(166, 100%, 37%, 0.09);
+  > span {
+    color: hsl(166, 100%, 37%);
+  }
 }
-#bg-memory {
-	background: hsla(39, 100%, 56%, 0.09);
-}
-#verbal {
-	color: hsl(166, 100%, 37%);
-}
-#bg-verbal {
-	background: hsla(166, 100%, 37%, 0.09);
-}
-#visual {
-	color: hsl(234, 85%, 45%);
-}
-#bg-visual {
-	background: hsla(234, 85%, 45%, 0.09);
+.visual {
+  background: hsla(234, 85%, 45%, 0.09);
+  > span {
+    color: hsl(234, 85%, 45%);
+  }
 }
 .score {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-	width: 25%;
-	color: hsl(224, 30%, 27%);
-	font-size: 1.7rem;
-	font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  color: hsl(224, 30%, 27%);
+  font-size: 1.7rem;
+  font-weight: 700;
 }
 .score a {
-	padding-left: 0.8rem;
-	font-size: 1.5rem;
-	color: hsl(245, 6%, 60%);
+  padding-left: 0.8rem;
+  font-size: 1.5rem;
+  color: hsl(245, 6%, 60%);
 }
 button {
-	font-size: 1.8rem;
-	font-weight: 500;
-	color: hsl(0, 0%, 100%);
-	border-radius: 24px;
-	outline: none;
-	border: none;
-	padding: 0.7em;
-	margin-top: 1.2rem;
-	background: hsl(224, 30%, 27%);
-    width: 300px;
-	min-height: 50px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: hsl(0, 0%, 100%);
+  border-radius: 24px;
+  outline: none;
+  border: none;
+  padding: 0.7em;
+  margin-top: 1.2rem;
+  background: hsl(224, 30%, 27%);
+  width: 300px;
+  min-height: 50px;
 }
 
 button:hover {
-	background: linear-gradient(to bottom, hsl(256, 72%, 46%), hsl(241, 72%, 46%));
+  background: linear-gradient(
+    to bottom,
+    hsl(256, 72%, 46%),
+    hsl(241, 72%, 46%)
+  );
 }
 
 .attribution {
-	font-size: 1.2rem;
-	text-align: center;
+  font-size: 1.2rem;
+  text-align: center;
 }
 .attribution a {
-	color: hsl(228, 45%, 44%);
+  color: hsl(228, 45%, 44%);
 }
 @media screen and (min-width: 1000px) {
-	.wrapper {
-		justify-content: center;
-		align-items: center;
-	}
-	.container {
-		flex-direction: row;
-		align-items: center;
-        border-radius: 50px;
-        box-shadow: 5px 10px 30px 0px hsla(224, 30%, 27%, 0.134);
-		gap: 2rem;
-		width: 55%;
-		min-height: 500px;
-	}
-	.result-container {
-		justify-content: center;
-		border-radius: 50px;
-		padding: 3rem;
-		width: 50%;
-		min-height: 500px;
-	}
-	.center {
-		width: 85%;
-		height: 100%;
-		gap: 3rem;
-	}
-	#result-header h1 {
-		font-size: 2.4rem;
-	}
-	.result {
-		width: 165px;
-		height: 160px;
-	}
-	.result-text h1 {
-		font-size: 3rem;
-	}
-	.summary-container {
-		gap: 1.7rem;
-		width: 50%;
-		min-height: 500px;
-	}
-	#summary-header h1 {
-		font-size: 2.5rem;
-	}
-    .summary {
-        margin: 0.5rem;
-        width: 80%;
-    }
-    button {
-        width: 80%;
-    }
+  .wrapper {
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    flex-direction: row;
+    align-items: center;
+    border-radius: 50px;
+    box-shadow: 5px 10px 30px 0px hsla(224, 30%, 27%, 0.134);
+    gap: 2rem;
+    width: 55%;
+    min-height: 500px;
+  }
+  .result-container {
+    justify-content: center;
+    border-radius: 50px;
+    padding: 3rem;
+    width: 50%;
+    min-height: 500px;
+  }
+  .center {
+    width: 85%;
+    height: 100%;
+    gap: 3rem;
+  }
+  #result-header h1 {
+    font-size: 2.4rem;
+  }
+  .result {
+    width: 165px;
+    height: 160px;
+  }
+  .result-text h1 {
+    font-size: 3rem;
+  }
+  .summary-container {
+    gap: 1.7rem;
+    width: 50%;
+    min-height: 500px;
+  }
+  #summary-header h1 {
+    font-size: 2.5rem;
+  }
+  .summary {
+    margin: 0.5rem;
+    width: 80%;
+  }
+  button {
+    width: 80%;
+  }
 }
