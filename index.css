@@ -1,20 +1,33 @@
-@font-face {
-  font-family: "MyFont";
-  src: url(/assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format("truetype");
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+:root {
+  --clr-light-red: hsl(0, 100%, 67%);
+  --clr-orangey-yellow: hsl(39, 100%, 56%);
+  --clr-green-teal: hsl(166, 100%, 37%);
+  ---clr-cobalt-blue: hsl(234, 85%, 45%);
+
+  --clr-bg-lightslate-blue: hsl(252, 100%, 67%);
+  --clr-bg-lightroyal-blue: hsl(241, 81%, 54%);
+
+  --clr-violet-blue: hsla(256, 72%, 46%, 1);
+  --clr-persian-blue: hsla(241, 72%, 46%, 0);
+
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-pale-blue: hsl(221, 100%, 96%);
+  --clr-light-lavender: hsl(241, 100%, 89%);
+  --clr-darkgray-blue: hsl(224, 30%, 27%);
 }
 * {
-  font-family: "MyFont", sans-serif;
+  font-family: "Hanken Grotesk";
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 html {
   font-size: 62.5%;
-  min-width: 375px;
 }
 body {
   font-size: 1.8rem;
-  background: hsl(0, 0%, 100%);
+  background: var(--clr-white);
   overflow: clip;
 }
 .wrapper {
@@ -38,8 +51,8 @@ body {
   border-radius: 0 0 50px 50px;
   background: linear-gradient(
     to bottom,
-    hsl(252, 100%, 67%),
-    hsl(241, 81%, 54%)
+    var(--clr-bg-lightslate-blue),
+    var(--clr-bg-lightroyal-blue)
   );
   padding: 2.5rem;
   gap: 2rem;
@@ -47,7 +60,7 @@ body {
   #result-h1 {
     text-align: center;
     font-size: 1.8rem;
-    color: hsl(241, 100%, 89%);
+    color: var(--clr-light-lavender);
   }
 }
 .result {
@@ -55,17 +68,17 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+  background: radial-gradient(var(--clr-violet-blue), var(--clr-persian-blue));
   border-radius: 50%;
   width: 125px;
   height: 120px;
   > span {
-    color: hsl(0, 0%, 100%);
+    color: var(--clr-white);
     font-weight: 800;
     font-size: 5.5rem;
   }
   > a {
-    color: hsl(241, 100%, 89%, 0.5);
+    color: var(--clr-light-lavender);
     font-weight: 500;
   }
 }
@@ -74,10 +87,10 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  color: hsl(241, 100%, 89%);
-  > h1 {
+  color: var(--clr-light-lavender);
+  > h2 {
     font-size: 2.2rem;
-    color: hsl(0, 0%, 100%);
+    color: var(--clr-white);
     padding: 8px;
   }
   > p {
@@ -94,7 +107,7 @@ body {
   width: 100%;
   #summary-h1 {
     width: 100%;
-    color: hsl(224, 30%, 27%);
+    color: var(clr-darkgray-blue);
     font-size: 1.8rem;
   }
 }
@@ -121,58 +134,58 @@ body {
     }
   }
   > span {
-    color: hsl(224, 30%, 27%);
+    color: var(clr-darkgray-blue);
     font-size: 1.7rem;
     font-weight: 700;
     > a {
       padding-left: 0.8rem;
       font-size: 1.5rem;
-      color: hsl(245, 6%, 60%);
+      color: var(--clr-darkgray-blue);
     }
   }
 }
 .reaction {
-  background: hsla(0, 100%, 67%, 0.09);
+  background: hsla(0, 100%, 67%, 0.1);
   > div p {
-    color: hsl(0, 100%, 67%);
+    color: var(--clr-light-red);
   }
 }
 .memory {
-  background: hsla(39, 100%, 56%, 0.09);
+  background: hsla(39, 100%, 56%, 0.1);
   > div p {
-    color: hsl(39, 100%, 56%);
+    color: var(--clr-orangey-yellow);
   }
 }
 .verbal {
-  background: hsla(166, 100%, 37%, 0.09);
+  background: hsla(166, 100%, 37%, 0.1);
   > div p {
-    color: hsl(166, 100%, 37%);
+    color: var(--clr-green-teal);
   }
 }
 .visual {
-  background: hsla(234, 85%, 45%, 0.09);
+  background: hsla(234, 85%, 45%, 0.1);
   > div p {
-    color: hsl(234, 85%, 45%);
+    color: var(---clr-cobalt-blue);
   }
 }
 
 button {
   font-size: 1.8rem;
   font-weight: 700;
-  color: hsl(0, 0%, 100%);
+  color: var(--clr-pale-blue);
   border-radius: 24px;
   outline: none;
   border: none;
   padding: 1.5rem;
-  background: hsl(224, 30%, 27%);
+  background: var(--clr-darkgray-blue);
   width: min(80%, 300px);
 }
 
 button:hover {
   background: linear-gradient(
     to bottom,
-    hsl(256, 72%, 46%),
-    hsl(241, 72%, 46%)
+    var(--clr-bg-lightslate-blue),
+    var(--clr-bg-lightroyal-blue)
   );
 }
 
