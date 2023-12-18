@@ -28,10 +28,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2rem;
 }
 .result-container {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   border-radius: 0 0 50px 50px;
   background: linear-gradient(
@@ -39,15 +41,14 @@ body {
     hsl(252, 100%, 67%),
     hsl(241, 81%, 54%)
   );
-  padding: 2rem;
+  padding: 2.5rem;
+  gap: 1rem;
   width: 100%;
-  min-height: 300px;
-}
-#result-h1 {
-  text-align: center;
-  padding: 2rem;
-  font-size: 1.8rem;
-  color: hsl(241, 100%, 89%);
+  #result-h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: hsl(241, 100%, 89%);
+  }
 }
 .result {
   display: flex;
@@ -58,43 +59,40 @@ body {
   border-radius: 50%;
   width: 125px;
   height: 120px;
-}
-.result span {
-  color: hsl(0, 0%, 100%);
-  font-weight: 800;
-  font-size: 5.5rem;
-}
-.result a {
-  color: hsl(241, 100%, 89%, 0.5);
-  font-weight: 500;
+  > span {
+    color: hsl(0, 0%, 100%);
+    font-weight: 800;
+    font-size: 5.5rem;
+  }
+  > a {
+    color: hsl(241, 100%, 89%, 0.5);
+    font-weight: 500;
+  }
 }
 .result-description {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 3rem;
+  gap: 1rem;
   color: hsl(241, 100%, 89%);
-}
-.result-description h1 {
-  font-size: 2.2rem;
-  color: hsl(0, 0%, 100%);
-  padding: 8px;
+  > h1 {
+    font-size: 2.2rem;
+    color: hsl(0, 0%, 100%);
+    padding: 8px;
+  }
 }
 .summary-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
-  gap: 1rem;
-  width: 85%;
-  .summary-header {
+  padding: 2rem;
+  gap: 2rem;
+  width: 100%;
+  #summary-h1 {
     width: 100%;
-    padding: 1.2rem;
     color: hsl(224, 30%, 27%);
-    > h1 {
-      font-size: 1.8rem;
-    }
+    font-size: 1.8rem;
   }
 }
 .summary {
@@ -104,18 +102,16 @@ body {
   align-items: center;
   justify-content: space-between;
   font-weight: 700;
-  padding: 0.8rem;
-  border-radius: 11px;
+  padding: 1rem;
+  border-radius: 10px;
   width: 100%;
-  min-height: 50px;
-}
-.summary span {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  font-size: 1.5rem;
-  width: 35%;
+  > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    font-size: 1.5rem;
+  }
 }
 .summary span img {
   width: 35px;
